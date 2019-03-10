@@ -31,7 +31,7 @@ ul li {
 ul li:nth-child(1) {
     background: url(../img/portfolio01.jpg);
     background-size: cover;
-    background-position: left;
+    background-position: center;
 }
 
 ul li:nth-child(2) {
@@ -75,7 +75,7 @@ ul li .content {
     box-sizing: border-box;
     color: #fff;
     opacity: 0;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 ul li:hover .content {
@@ -85,8 +85,14 @@ ul li:hover .content {
     opacity: 1;
 }
 
+.content h2 {
+    font-size: 18px;
+}
+
 .content p {
     margin: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 ul li .content .portfolio {
@@ -101,20 +107,20 @@ ul li .content .portfolio {
 
 .portfolio {
     transform: translate(-50%, -50%);
-    font-size: 24px;
-    letter-spacing: 2px;
+    font-size: 16px;
+    letter-spacing: 1px;
     transition: .3s cubic-bezier(.17,.67,.09,1.91);
-
 }
 
 .portfolio:hover {
-    letter-spacing: 15px;
+    letter-spacing: 3px;
 }
 
+/* LOGO RG */
 .logo {
     position: absolute;
-    top: 10%;
-    left: 1%;
+    top: 5%;
+    left: 3%;
     z-index: 1;
 }
 
@@ -131,4 +137,51 @@ ul li .content .portfolio {
 .logo a img:hover {
     box-shadow: 1px 1px 50px #fffc23;
     transition: .5s;
+}
+/* FIM LOGO RG */
+
+@media (min-width: 500px) {
+    .content h2 {
+        font-size: 22px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+    
+    .portfolio {
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        letter-spacing: 2px;
+        transition: .3s cubic-bezier(.17,.67,.09,1.91);
+    }
+    
+    .portfolio:hover {
+        letter-spacing: 5px;
+    }
+
+    /* LOGO RG */
+    .logo {
+        top: 10%;
+        left: 1%;
+    }
+    /* FIM LOGO RG */
+}
+
+@media (min-width: 768px) {
+    .content h2 {
+        font-size: 26px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+    
+    .portfolio {
+        font-size: 24px;
+    }
+    
+    .portfolio:hover {
+        letter-spacing: 15px;
+    }
 }
